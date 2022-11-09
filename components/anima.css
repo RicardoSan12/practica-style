@@ -1,0 +1,99 @@
+/* 
+.Anima
+  .cuadrado
+    p
+    */
+.Anima {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0.5rem;
+  width: 90%;
+  min-height: 600px;
+  margin: 1rem auto;
+}
+.cuadrado:nth-child(1) {
+  height: 200px;
+  max-width: 350px;
+  width: 100%;
+  display: grid;
+  /* grid-template: 'header header header' 30px 'lado main main' 3fr 'lado foot foot' 1fr / 100px 1fr; */
+  grid-template: 'header header header' 'lado main main' 'lado foot foot';
+  grid-template-rows: 30px 3fr 1fr;
+  /* grid-template-columns: 100px 1fr; */
+  gap: 0.4rem;
+  transition: all 1s;
+  box-shadow: inset 3em 1em 12px rgb(0, 60, 255);
+}
+.cuadrado p {
+  /* width: 80px;
+  height: 40px; */
+  /* background-color: rgb(233, 38, 103); */
+  border: 3px solid rgb(0, 255, 42);
+}
+.cuadrado:nth-child(1) p:nth-child(1) {
+  grid-area: header;
+}
+.cuadrado:nth-child(1) p:nth-child(2) {
+  grid-area: lado;
+}
+.cuadrado:nth-child(1) p:nth-child(3) {
+  grid-area: main;
+}
+.cuadrado:nth-child(1) p:nth-child(4) {
+  grid-area: foot;
+}
+
+/* .cuadrado p:nth-child(5) {
+  grid-area: pies;
+}
+.cuadrado p:nth-child(6) {
+  grid-area: mano;
+} */
+
+.cuadrado--red {
+  border: 2px dashed red;
+  background-image: url(https://images.pexels.com/photos/1089194/pexels-photo-1089194.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-size: 100% 100%;
+}
+.cuadrado--red:hover {
+  background-position: 20% 100%;
+}
+
+.cuadrado--red p:nth-child(1) {
+}
+.cuadrado--blue {
+  background: url(https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=600)
+    fixed center;
+  height: 200px;
+  max-width: 350px;
+  width: 100%;
+  display: grid;
+  grid-gap: 0.4rem;
+  grid-template: 1fr 80px 1fr / 1fr 120px;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  box-shadow: 1em 1em 0px 2rem gold;
+}
+
+.cuadrado--blue p:nth-child(4) {
+  grid-column: 4 / span 1;
+  grid-row: 2/ 4;
+}
+
+/* .cuadrado div:hover {} */
+
+/* .cuadrado--red:hover p {} */
+
+/* .cuadrado--blue p {} */
+
+.cuadrado--rose {
+  background: rgb(219, 0, 201);
+}
+
+.cuadrado--rose p {
+  float: left;
+  width: 70px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+}

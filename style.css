@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import 'components/anima.css';
+
+body {
+  background-color: rgb(33, 0, 110);
+  color: rgb(230, 230, 230);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  padding: 1rem;
+  background-color: rgb(194, 0, 107);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.user {
+  background-color: rgba(26, 26, 26, 0.61);
+  padding: 1rem 2rem;
+  max-width: 330px;
+  width: 80%;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+.user h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 40%;
+  height: 100%;
+
+  background: rgb(0, 247, 255);
+}
+.user img {
+  border-radius: 50%;
+  margin: auto;
+  transition: outline 500ms, offset 500ms;
+  outline: 3px solid white;
+}
+.user img:hover {
+  outline: 6px solid rgb(229, 255, 0);
+  outline-offset: 6px;
+}
+
+.contador {
+  border: 4px solid white;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contador h2 {
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(0, 59, 148, 0.989);
+}
